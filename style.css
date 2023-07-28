@@ -7,6 +7,13 @@
   padding: 0;
 }
 
+.body-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+}
+
 body {
   min-height:100vh;
   background: url('background.png') no-repeat;
@@ -33,6 +40,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
+  
 }
 
 .navbar a {
@@ -42,12 +50,13 @@ body {
   font-weight: 500;
   margin-left: 40px;
   position: relative;
+  list-style: none;
 }
 
 .navbar a::before {
   content: '';
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0;
   width: 0%;
   height: 2px;
@@ -55,6 +64,11 @@ body {
   transition: 0.35s;
 }
 
+.navbar a:is(:link, :active, :visited).active {
+  font-weight: bold;
+}
+
 .navbar a:hover::before {
   width: 100%;
 }
+
